@@ -94,27 +94,6 @@ python --version
 uv pip install -r requirements.txt
 ```
 
-If `.venv` was already created with the wrong Python version, delete it and recreate it from the project root:
-
-```powershell
-Remove-Item -Recurse -Force .venv
-uv venv
-```
-
-Copy the environment template and fill in your local values:
-
-```bash
-cp .env.example .env
-```
-
-On Windows PowerShell, copy the file with:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-Do not commit `.env`.
-
 ## Day 1 Design Decisions
 
 - Primary UI: Streamlit
