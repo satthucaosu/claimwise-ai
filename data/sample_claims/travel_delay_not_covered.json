@@ -1,0 +1,24 @@
+{
+  "claim_id": "CLM-TRV-002",
+  "policy_number": "TRV-2026-1002",
+  "claim_type": "travel_delay",
+  "description": "My train from Lyon to Milan arrived 5 hours late. I bought dinner at the station and would like reimbursement.",
+  "incident_date": "2026-05-03",
+  "submission_date": "2026-05-04",
+  "incident_location": "Lyon Part-Dieu Station",
+  "submitted_documents": [
+    "booking_confirmation",
+    "carrier_delay_confirmation",
+    "meal_receipts"
+  ],
+  "claimed_amount": 31.0,
+  "currency": "EUR",
+  "expected_outcome": {
+    "coverage_signal": "not_covered",
+    "missing_documents": [
+      "boarding_pass_or_proof_of_check_in"
+    ],
+    "manual_review_required": false,
+    "reason": "Travel delay coverage applies only when the delay is greater than 6 hours."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "claim_id": "CLM-CAR-001",
+  "policy_number": "CAR-2026-2001",
+  "claim_type": "car_accident",
+  "description": "I hit a roadside barrier after skidding on a wet road. No other vehicle was involved and nobody was injured. The front bumper and right headlight were damaged.",
+  "incident_date": "2026-02-18",
+  "submission_date": "2026-02-19",
+  "incident_location": "A6 motorway near Beaune",
+  "submitted_documents": [
+    "accident_report",
+    "damage_photos",
+    "repair_invoice",
+    "drivers_license",
+    "vehicle_registration"
+  ],
+  "claimed_amount": 1240.0,
+  "currency": "EUR",
+  "expected_outcome": {
+    "coverage_signal": "likely_covered",
+    "missing_documents": [],
+    "manual_review_required": false,
+    "reason": "Standard car accident documents are present and no injury or disputed liability is described."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-MIX-001",
+  "policy_number": "UNKNOWN",
+  "claim_type": "unknown",
+  "description": "I had a problem during my trip and some of my things were damaged. I also paid extra costs and want to know if insurance can refund me. I do not have all the papers yet.",
+  "incident_date": null,
+  "submission_date": "2026-05-10",
+  "incident_location": "Unknown",
+  "submitted_documents": [],
+  "claimed_amount": 2300.0,
+  "currency": "EUR",
+  "expected_outcome": {
+    "coverage_signal": "manual_review",
+    "missing_documents": [
+      "policy_number",
+      "claim_type",
+      "incident_date",
+      "incident_location",
+      "specific_incident_description",
+      "supporting_documents"
+    ],
+    "manual_review_required": true,
+    "reason": "The claim is missing required information, has no supporting documents, and exceeds the travel manual review threshold."
+  }
+}

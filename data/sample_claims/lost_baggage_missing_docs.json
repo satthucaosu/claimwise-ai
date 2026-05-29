@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-TRV-003",
+  "policy_number": "TRV-2026-1003",
+  "claim_type": "lost_baggage",
+  "description": "My checked suitcase did not arrive after my flight from Rome to Paris. The airline later told me they could not locate it. The suitcase contained clothes, shoes, and a camera.",
+  "incident_date": "2026-03-21",
+  "submission_date": "2026-03-27",
+  "incident_location": "Paris Orly Airport",
+  "submitted_documents": [
+    "baggage_tag",
+    "airline_irregularity_report",
+    "itemized_list"
+  ],
+  "claimed_amount": 980.0,
+  "currency": "EUR",
+  "expected_outcome": {
+    "coverage_signal": "needs_more_information",
+    "missing_documents": [
+      "final_airline_confirmation_of_loss",
+      "receipts_or_purchase_proof_for_high_value_items"
+    ],
+    "manual_review_required": true,
+    "reason": "Lost baggage requires airline confirmation of loss, and the camera is a high-value item without receipt evidence."
+  }
+}

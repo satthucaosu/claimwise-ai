@@ -1,0 +1,23 @@
+{
+  "claim_id": "CLM-TRV-001",
+  "policy_number": "TRV-2026-1001",
+  "claim_type": "travel_delay",
+  "description": "My flight from Paris to Lisbon was delayed by 8 hours because of an airline operational issue. I bought meals and refreshments at the airport while waiting.",
+  "incident_date": "2026-04-12",
+  "submission_date": "2026-04-14",
+  "incident_location": "Paris Charles de Gaulle Airport",
+  "submitted_documents": [
+    "booking_confirmation",
+    "boarding_pass",
+    "airline_delay_confirmation",
+    "meal_receipts"
+  ],
+  "claimed_amount": 42.5,
+  "currency": "EUR",
+  "expected_outcome": {
+    "coverage_signal": "likely_covered",
+    "missing_documents": [],
+    "manual_review_required": false,
+    "reason": "Delay is greater than 6 hours and required documents are present."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "claim_id": "CLM-HOME-001",
+  "policy_number": "HOM-2026-3001",
+  "claim_type": "home_water_damage",
+  "description": "A pipe under the kitchen sink leaked and damaged the cabinet and floor. I discovered it on April 2 but submitted the claim on April 11 after a plumber visited.",
+  "incident_date": "2026-04-02",
+  "submission_date": "2026-04-11",
+  "incident_location": "Insured home kitchen",
+  "submitted_documents": [
+    "damage_photos",
+    "plumber_damage_report",
+    "repair_estimate"
+  ],
+  "claimed_amount": 860.0,
+  "currency": "EUR",
+  "expected_outcome": {
+    "coverage_signal": "manual_review",
+    "missing_documents": [],
+    "manual_review_required": true,
+    "reason": "Home water damage should be declared within 5 days of discovery, and this claim was submitted after 9 days."
+  }
+}
