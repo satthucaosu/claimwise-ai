@@ -44,6 +44,38 @@ Each sample claim should include:
 - currency
 - expected_outcome
 
+## Sample Claim Schema
+
+The first implementation can keep the schema simple and readable:
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| claim_id | string | Stable sample identifier |
+| policy_number | string | Synthetic policy number |
+| claim_type | string | Example values: `travel_delay`, `lost_baggage`, `car_accident`, `home_water_damage` |
+| description | string | Free-text claim description used for extraction |
+| incident_date | string | ISO date, or unknown when the claimant does not provide it |
+| submission_date | string | ISO date, or unknown when not provided |
+| incident_location | string | City, airport, road, home, or unknown |
+| submitted_documents | list[string] | Documents the claimant already provided |
+| claimed_amount | number | Claimed amount when known |
+| currency | string | Example: `EUR`, `USD`, `GBP` |
+| expected_outcome | object | Test oracle for rules and manual review |
+
+Suggested `expected_outcome` shape:
+
+```json
+{
+  "coverage_signal": "covered | not_covered | needs_review",
+  "missing_documents": ["document name"],
+  "manual_review_required": true,
+  "reason_codes": ["short_machine_readable_reason"],
+  "notes": "Human-readable explanation for tests and demo."
+}
+```
+
+This field is not the assistant's final answer. It is a small test oracle so deterministic rules and evaluation checks can compare actual behavior against an expected result.
+
 ## Policy Rules
 
 ### Travel Insurance

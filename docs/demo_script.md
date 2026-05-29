@@ -4,6 +4,20 @@
 
 Show that ClaimWise AI is more than a chat-with-documents app. The demo should highlight RAG, citations, structured extraction, deterministic rules, LangGraph routing, evaluation, and production awareness.
 
+Current status: this is the target demo script for the finished MVP. At the end of Day 1, the repository contains scaffolded modules and synthetic data, but the Streamlit UI, RAG pipeline, claim analyzer, email draft flow, and evaluation runner are not ready to demo yet.
+
+## Day 1 Mini-Demo
+
+Before the app exists, the Day 1 demo is a short walkthrough of project readiness:
+
+1. Show `README.md` and explain the problem, scope, and current status.
+2. Show `PROJECT_PLAN.md` and explain the 14-day build path.
+3. Show `docs/architecture.md` and describe the planned Streamlit, FastAPI, LangGraph, RAG, and Chroma flow.
+4. Show `docs/data_design.md` and the synthetic files under `data/raw_docs/` and `data/sample_claims/`.
+5. Explain that implementation packages under `src/` are placeholders and Day 2 starts with ingestion and chunking.
+
+This keeps the Day 1 presentation truthful while still showing architecture, planning, and data readiness.
+
 ## Demo Setup
 
 Before running the demo, make sure the local environment is ready.
@@ -31,7 +45,7 @@ uv pip install -r requirements.txt
 
 Confirm `.env` exists and contains the local Ollama configuration. Do not show secret values during the demo.
 
-## Demo Flow
+## Finished MVP Demo Flow
 
 ### 1. Introduce the Problem
 

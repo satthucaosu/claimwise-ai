@@ -6,6 +6,8 @@ ClaimWise AI is a portfolio-oriented Gen AI assistant for synthetic insurance cl
 
 The architecture is intentionally simple enough to finish in two weeks while still showing production awareness.
 
+Current implementation status: the repository has Day 1 scaffolding, documentation, synthetic raw documents, and sample claims. The components below describe the intended MVP architecture; the Streamlit app, FastAPI service, RAG pipeline, vector store, claim tools, and LangGraph workflow are not implemented yet.
+
 ## High-Level Flow
 
 ```text

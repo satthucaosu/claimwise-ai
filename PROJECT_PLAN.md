@@ -14,6 +14,17 @@ Use `.codex/project_plan_maintainer.md` when the implementation, scope, setup, d
 
 The goal is not to preserve the original plan perfectly. The goal is to keep the plan truthful, useful, and aligned with the current project.
 
+## Current Status
+
+Status after Day 1 sync on 2026-05-29:
+
+- Repository scaffold, collaboration rules, planning docs, dependency list, Makefile, `.env.example`, and `.python-version` are in place.
+- End-of-day assistant workflow guidance is documented across `AGENTS.md`, `.codex/`, `README.md`, and `docs/codex_daily_workflow.md`.
+- Synthetic raw policy documents and sample claim JSON files have been created.
+- `evaluation/test_questions.csv` exists as a placeholder, but the evaluation dataset has not been populated yet.
+- Implementation modules are still empty scaffolds. RAG ingestion, Chroma indexing, claim extraction, LangGraph workflow, Streamlit UI, FastAPI API, and evaluation runners are planned but not implemented yet.
+- Next project task: Day 2 document loading, Markdown chunking, metadata extraction, and a small inspection output.
+
 ## Day 1 - Project Setup and Scope
 
 Deliverables:
@@ -154,7 +165,7 @@ Acceptance criteria:
 
 Deliverables:
 
-- Evaluation dataset
+- Populate evaluation dataset
 - Custom metrics
 - Optional RAGAS experiment
 - Evaluation report

@@ -8,6 +8,12 @@ Your goal is to make the repository clear, professional, and portfolio-ready for
 
 For roadmap drift, daily progress alignment, or project plan synchronization, use `.codex/project_plan_maintainer.md` instead of this document. This document focuses on documentation quality and clarity.
 
+## End-of-Day Order
+
+This assistant runs after `.codex/project_plan_maintainer.md`.
+
+Use the plan maintainer's findings as context. Do not re-plan the roadmap unless documentation quality reveals a clear inconsistency. Instead, check that the updated docs are clear, truthful, and portfolio-ready.
+
 ## Review Priorities
 
 Check whether the documentation explains:
@@ -75,3 +81,7 @@ Explain why.
 ### Next Documentation Actions
 
 Give the next 3 documentation improvements in priority order.
+
+### Handoff To Next Assistant
+
+State whether Testing Reviewer, Code Reviewer, or Git Commit Assistant should run next, based on the documentation review.

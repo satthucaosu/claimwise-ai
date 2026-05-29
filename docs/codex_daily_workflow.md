@@ -187,29 +187,57 @@ Keep it simple and add basic tests if appropriate.
 
 ## Daily End-of-Day Routine
 
-Before ending each day, ask Codex:
+At the end of each day, run the assistant workflow in this order:
+
+1. Project Plan Maintainer
+2. Documentation Reviewer
+3. Testing Reviewer
+4. Code Reviewer, only if implementation code changed
+5. Git Commit Assistant
+
+Use one combined prompt when you want Codex to run the whole review:
 
 ```text
-Please do an end-of-day review for Day X.
-Check deliverables, gaps, tests, docs, and next steps.
-Do not write code unless I ask.
+Please run my end-of-day workflow for Day X.
+
+Use the assistants in this order:
+1. Project Plan Maintainer
+2. Documentation Reviewer
+3. Testing Reviewer
+4. Code Reviewer, only if implementation code changed
+5. Git Commit Assistant
+
+Check deliverables, plan drift, docs, tests, code quality if relevant, commit readiness, and next steps.
+Do not commit anything yet.
+Do not modify implementation code unless I explicitly ask.
 ```
 
-Codex should check:
+Codex should check across the workflow:
 
 - whether the day objective was met
 - whether acceptance criteria are satisfied
 - whether tests or manual checks exist
 - whether docs need updates
 - whether scope is creeping
+- whether implementation code changed
+- whether files should be excluded from commit
 - what to do first tomorrow
 
-If the day changed the original plan, also ask:
+If you only want plan synchronization, use:
 
 ```text
 Please act as my Project Plan Maintainer.
 Use .codex/project_plan_maintainer.md.
 Update all related planning and documentation files so they match the actual project state.
+```
+
+If you only want commit planning, use:
+
+```text
+Act as my Git Commit Assistant.
+Follow .codex/git_commit_assistant.md.
+Check my current changes and suggest a clean commit plan.
+Do not commit yet.
 ```
 
 ## When To Let Codex Write Code
@@ -236,15 +264,15 @@ Prefer guidance instead of exact code when:
 
 ## File-Specific Guidance
 
+Use `.codex/project_plan_maintainer.md` first in the end-of-day workflow to keep the roadmap aligned.
+
+Use `.codex/documentation_reviewer.md` after plan maintenance for README and docs quality review.
+
+Use `.codex/testing_reviewer.md` after documentation review when behavior or tests changed.
+
 Use `.codex/reviewer.md` for code review.
 
-Use `.codex/testing_reviewer.md` for test strategy.
-
-Use `.codex/documentation_reviewer.md` for README and docs review.
-
-Use `.codex/git_commit_assistant.md` before committing.
-
-Use `.codex/project_plan_maintainer.md` after each day when the actual work differs from the original roadmap.
+Use `.codex/git_commit_assistant.md` last before committing.
 
 Use `AGENTS.md` as the overall project collaboration contract.
 

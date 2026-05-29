@@ -164,6 +164,18 @@ Do not modify code during review unless I explicitly ask.
 
 Do not run git commit, git push, git reset, git checkout, or destructive git commands unless I explicitly ask.
 
+## End-of-Day Assistant Order
+
+At the end of each day, use the specialized assistants in this order:
+
+1. Project Plan Maintainer: sync actual progress with roadmap and docs.
+2. Documentation Reviewer: check clarity and portfolio readiness of docs.
+3. Testing Reviewer: identify missing tests and next test priorities.
+4. Code Reviewer: review implementation code only if code changed.
+5. Git Commit Assistant: inspect changed files, exclusions, checks, and commit messages.
+
+The Git Commit Assistant always runs last and should consider the findings from the previous assistants.
+
 ## Working Efficiently With Codex
 
 Before starting a new day or task, ask which day or feature is being worked on unless the user already says it.
